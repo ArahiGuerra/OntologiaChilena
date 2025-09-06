@@ -1,0 +1,87 @@
+CONSULTAS SPARQL.
+
+1. CANCIONES POR ÉPOCA Y GÉNERO.
+
+
+PREFIX : <http://www.semanticweb.org/sariw/ontologia_chilena#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?epoca ?genero (COUNT(?cancion) AS ?numCanciones)
+WHERE {
+  ?cancion rdf:type :Cancion ;
+           :perteneceAEpoca ?epoca ;
+           :perteneceAGenero ?genero .
+}
+GROUP BY ?epoca ?genero
+ORDER BY ?epoca DESC(?numCanciones)
+
+
+2. EVOLUCIÓN DE TEMÁTICAS POR DÉCADA.
+
+PREFIX : <http://www.semanticweb.org/sariw/ontologia_chilena#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?decada ?tematica (COUNT(?cancion) AS ?numCanciones)
+WHERE {
+  ?cancion rdf:type :Cancion ;
+           :trataSobre ?tematica ;
+           :tieneAnio ?anio .
+  BIND (FLOOR(xsd:integer(?anio)/10)*10 AS ?decada)
+}
+GROUP BY ?decada ?tematica
+ORDER BY ?decada DESC(?numCanciones)
+
+
+3. ARTISTAS MÁS REPRESENTATIVOS POR ÉPOCA.
+
+PREFIX : <http://www.semanticweb.org/sariw/ontologia_chilena#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?epoca ?artista (COUNT(?cancion) AS ?totalCanciones)
+WHERE {
+  ?cancion rdf:type :Cancion ;
+           :perteneceAEpoca ?epoca ;
+           :tieneArtista ?artista .
+}
+GROUP BY ?epoca ?artista
+ORDER BY ?epoca DESC(?totalCanciones)	
+
+
+4. CANCIONES SEGÚN ÉPOCA (Ej. Dictadura)
+
+PREFIX : <http://www.semanticweb.org/sariw/ontologia_chilena#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?cancion ?anio
+WHERE {
+  ?cancion rdf:type :Cancion ;
+           :perteneceAEpoca :Dictadura ;
+           :tieneAnio ?anio .
+}
+
+5. CANCIONES ENTRE 1970 Y 1989
+
+PREFIX : <http://www.semanticweb.org/sariw/ontologia_chilena#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?cancion ?anio
+WHERE {
+  ?cancion rdf:type :Cancion ;
+           :tieneAnio ?anio .
+  FILTER (?anio >= 1970 && ?anio <= 1989)
+}
+ORDER BY ?anio
+
+
+6. TODOS LOS ARTISTAS Y CUÁNTAS CANCIONES TIENEN
+
+PREFIX : <http://www.semanticweb.org/sariw/ontologia_chilena#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?artista (COUNT(?cancion) AS ?cantidadCanciones)
+WHERE {
+  ?cancion rdf:type :Cancion ;
+           :tieneArtista ?artista .
+}
+GROUP BY ?artista
+ORDER BY DESC(?cantidadCanciones)

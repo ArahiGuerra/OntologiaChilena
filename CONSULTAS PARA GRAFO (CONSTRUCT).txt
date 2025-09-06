@@ -1,0 +1,97 @@
+CONSULTAS PARA GRAFO (CONSTRUCT)
+
+1. CANCIONES - ARTISTA - ÉPOCA
+
+PREFIX : <http://www.semanticweb.org/sariw/ontologia_chilena#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+CONSTRUCT {
+  ?cancion :tieneArtista ?artista ;
+           :perteneceAEpoca ?epoca .
+}
+WHERE {
+  ?cancion rdf:type :Cancion ;
+           :tieneArtista ?artista ;
+           :perteneceAEpoca ?epoca .
+}
+
+
+2. CANCIONES Y SUS TEMÁTICAS
+
+PREFIX : <http://www.semanticweb.org/sariw/ontologia_chilena#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+CONSTRUCT {
+  ?cancion :trataSobre ?tematica .
+}
+WHERE {
+  ?cancion rdf:type :Cancion ;
+           :trataSobre ?tematica .
+}
+
+
+3. CONEXIÓN ENTRE GÉNEROS Y ÉPOCAS
+
+PREFIX : <http://www.semanticweb.org/sariw/ontologia_chilena#>
+PREFIX rdf: <htt
+p://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+CONSTRUCT {
+  ?cancion :perteneceAEpoca ?epoca ;
+           :perteneceAGenero ?genero .
+}
+WHERE {
+  ?cancion rdf:type :Cancion ;
+           :perteneceAEpoca ?epoca ;
+           :perteneceAGenero ?genero .
+}
+
+
+4. CANCIONES DE UNA ÉPOCA (Ej. Dictadura)
+
+PREFIX : <http://www.semanticweb.org/sariw/ontologia_chilena#>
+PREFIX rdf: <htt
+p://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+CONSTRUCT {
+  ?cancion :perteneceAEpoca :Dictadura ;
+           :tieneArtista ?artista ;
+           :trataSobre ?tematica .
+}
+WHERE {
+  ?cancion a :Cancion ;
+           :perteneceAEpoca :Dictadura ;
+           :tieneArtista ?artista ;
+           :trataSobre ?tematica .
+}
+
+
+5. CANCIONES CON MÚLTIPLES GÉNEROS
+
+PREFIX : <http://www.semanticweb.org/sariw/ontologia_chilena#>
+PREFIX rdf: <htt
+p://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+CONSTRUCT {
+  ?cancion :perteneceAGenero ?genero .
+}
+WHERE {
+  ?cancion a :Cancion ;
+           :perteneceAGenero ?genero .
+}
+
+
+6. ÉPOCAS Y ARTISTAS QUE APARECEN EN ELLAS
+
+PREFIX : <http://www.semanticweb.org/sariw/ontologia_chilena#>
+PREFIX rdf: <htt
+p://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+CONSTRUCT {
+  ?epoca :tieneArtista ?artista .
+}
+WHERE {
+  ?cancion a :Cancion ;
+           :perteneceAEpoca ?epoca ;
+           :tieneArtista ?artista .
+}
