@@ -1,0 +1,1914 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sariw/ontologia_chilena/"
+     xml:base="http://www.semanticweb.org/sariw/ontologia_chilena/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontologia_chilena="http://www.semanticweb.org/sariw/ontologia_chilena#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#abordaTematica -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#abordaTematica">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#trataSobre"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#compuso -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#compuso">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#tieneArtista"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#esDeGenero -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#esDeGenero">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#perteneceAGenero"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#ocurreEnEpoca -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#ocurreEnEpoca">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#perteneceAEpoca"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Epoca"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#perteneceAEpoca -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#perteneceAEpoca">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Epoca"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#perteneceAGenero -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#perteneceAGenero">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#produjo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#produjo">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#tieneProductor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#tieneArtista -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#tieneArtista">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#tieneProductor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#tieneProductor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#trataSobre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#trataSobre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#tieneAnio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#tieneAnio">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Anio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Anio"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Artista -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Cancion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#perteneceAEpoca"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Epoca"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#perteneceAGenero"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#tieneArtista"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#tieneProductor"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#trataSobre"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#tieneAnio"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Epoca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Epoca"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Genero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Productor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Tematica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#A_Fuego -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#A_Fuego">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Trap"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#DrefQuila"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#DrefQuila"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Autoafirmacion"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Juventud"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Adios_General -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Adios_General">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#ResignificadasEn2019"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#NuevaCancionChilena"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Sol_y_Lluvia"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Sol_y_Lluvia"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#CaidaDeDictadura"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1988</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Akriila -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Akriila">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Alejandro_Caco_Lyon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Alejandro_Caco_Lyon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Alienacion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Alienacion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Amor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Amor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Ana_Tijoux -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Ana_Tijoux">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Antiimperialismo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Antiimperialismo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Antipatriarca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Antipatriarca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#HipHop"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#RapPolitico"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Ana_Tijoux"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Ana_Tijoux"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Autoafirmacion"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Feminismo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2014</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Aquelarre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Aquelarre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Autoafirmacion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Autoafirmacion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#BBs_Paranoicos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#BBs_Paranoicos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Cacerolazo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Cacerolazo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#HipHop"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#RapPolitico"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Ana_Tijoux"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Jon_Grandcamp"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#DDHH"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Memoria"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#CaidaDeDictadura -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#CaidaDeDictadura">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Calla_y_espera -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Calla_y_espera">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Postdictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Transicion"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#PunkMelodico"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#BBs_Paranoicos"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#BBs_Paranoicos"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Alienacion"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Juventud"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1995</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#CambioSocial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#CambioSocial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Carlos_Fonseca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Carlos_Fonseca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Ceaese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Ceaese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Chancho_en_Piedra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Chancho_en_Piedra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Chile_cambia_ya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Chile_cambia_ya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#PopExperimental"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Florcita_Motuda"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Florcita_Motuda"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#CambioSocial"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Satira"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1988</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Chile_la_alegria_ya_viene -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Chile_la_alegria_ya_viene">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#JinglePolitico"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Varios_Artistas"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Colectivo_Patricio_Manns"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#DDHH"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Esperanza"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Memoria"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Plebiscito"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Unidad"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1988</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Colectivo_Patricio_Manns -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Colectivo_Patricio_Manns">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Congreso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Congreso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Convencete -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Convencete">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#PopUrbano"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Princesa_Alba"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Princesa_Alba"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Feminismo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Juventud"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#CriticaAElites -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#CriticaAElites">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#CriticaSocial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#CriticaSocial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#CulturaPopular -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#CulturaPopular">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Cumbia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Cumbia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Cumbia_para_olvidar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Cumbia_para_olvidar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cumbia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Pop"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Mon_Laferte"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Mon_Laferte"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Juventud"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#MelancoliaSocial"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Cumbiarock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Cumbiarock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#DDHH -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#DDHH">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#DerechoAVivienda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#DerechoAVivienda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Desigualdad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Desigualdad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Epoca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#DrefQuila -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#DrefQuila">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Eduardo_Carrasco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Eduardo_Carrasco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Educacion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Educacion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#El_Gil_De_Tu_Ex -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#El_Gil_De_Tu_Ex">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cumbia"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Santaferia"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Santaferia"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#HumorSocial"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Juventud"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2018</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#El_Otro_Chile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#El_Otro_Chile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#HipHop"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Portavoz"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Portavoz"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#CriticaSocial"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desigualdad"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#El_baile_de_los_que_sobran -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#El_baile_de_los_que_sobran">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Postdictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#ResignificadasEn2019"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Transicion"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#NewWave"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#PopLatino"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Rock"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Los_Prisioneros"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Alejandro_Caco_Lyon"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#CriticaSocial"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desigualdad"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Educacion"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Juventud"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1986</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#El_derecho_de_vivir_en_paz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#El_derecho_de_vivir_en_paz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#ResignificadasEn2019"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#NuevaCancionChilena"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Victor_Jara"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Victor_Jara"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Antiimperialismo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#DDHH"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Memoria"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Paz"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1971</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#El_pueblo_unido_jamas_sera_vencido -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#El_pueblo_unido_jamas_sera_vencido">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#ResignificadasEn2019"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#NuevaCancionChilena"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Inti_Illimani"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Horacio_Salinas"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Esperanza"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Unidad"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1973</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#En_todas_las_esquinas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#En_todas_las_esquinas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#FusionLatinoamericana"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Congreso"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Congreso"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#CriticaAElites"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#CriticaSocial"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desigualdad"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1986</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#En_un_largo_tour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#En_un_largo_tour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#NuevaCancionChilena"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Sol_y_Lluvia"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Sol_y_Lluvia"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Juventud"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1987</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Esperanza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Esperanza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Epoca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Estrechez_de_corazon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Estrechez_de_corazon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Postdictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Transicion"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#NewWave"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#PopLatino"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Rock"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Los_Prisioneros"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Los_Prisioneros"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Amor"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#CriticaAElites"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Exilio"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1987</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Exilio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Exilio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Feminismo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Feminismo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Fiskales_Ad_Hok -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Fiskales_Ad_Hok">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Florcita_Motuda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Florcita_Motuda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Flotando -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Flotando">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Pop"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Trap"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Gianluca"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Gianluca"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Alienacion"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Juventud"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2018</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Flyte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Flyte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Trap"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Pablo_Chill_E"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Pablo_Chill_E"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#HumorSocial"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#JuventudMarginal"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Folk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Folk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#FolkAndino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#FolkAndino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#FolkDelSurDeChile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#FolkDelSurDeChile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#FunkRock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#FunkRock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#FusionLatinoamericana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#FusionLatinoamericana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Genero -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Genero">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Gianluca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Gianluca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Hijo_del_sol_luminoso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Hijo_del_sol_luminoso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#FusionLatinoamericana"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Congreso"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Congreso"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Identidad"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#PueblosOriginarios"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Territorio"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1987</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#HipHop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#HipHop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Horacio_Salinas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Horacio_Salinas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#HumorSocial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#HumorSocial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Identidad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Identidad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#IdentidadCultural -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#IdentidadCultural">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Illapu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Illapu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Inti_Illimani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Inti_Illimani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#JinglePolitico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#JinglePolitico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Joe_Vasconcellos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Joe_Vasconcellos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Jon_Grandcamp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Jon_Grandcamp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Jonas_Sanche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Jonas_Sanche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Juventud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Juventud">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#JuventudMarginal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#JuventudMarginal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#La_Floripondio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#La_Floripondio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#La_Joya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#La_Joya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cumbia"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Villa_Carinio"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Villa_Carinio"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#HumorSocial"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Identidad"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Territorio"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#La_Muralla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#La_Muralla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#NuevaCancionChilena"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Quilapayun"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Eduardo_Carrasco"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Esperanza"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Unidad"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1969</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#La_Terapia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#La_Terapia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Trap"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Young_Cister"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Young_Cister"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Juventud"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#La_joya_del_Pacifico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#La_joya_del_Pacifico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Postdictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Transicion"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#FusionLatinoamericana"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Joe_Vasconcellos"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Joe_Vasconcellos"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#CulturaPopular"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Identidad"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Territorio"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1995</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Las_Casas_Son_Nuestras -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Las_Casas_Son_Nuestras">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#HipHop"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Portavoz"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Portavoz"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#DerechoAVivienda"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Lejos_del_amor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Lejos_del_amor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Postdictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Transicion"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#FolkAndino"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Illapu"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Illapu"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Identidad"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#MelancoliaSocial"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Territorio"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1997</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Libertad_vigilada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Libertad_vigilada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Postdictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Transicion"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Punk"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Fiskales_Ad_Hok"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Fiskales_Ad_Hok"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#CriticaSocial"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desigualdad"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1997</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Lluvia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Lluvia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#FolkDelSurDeChile"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Schwenke_y_Nilo"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Schwenke_y_Nilo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#DDHH"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#MelancoliaSocial"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Memoria"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#SurDeChile"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1985</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Locura_espacial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Locura_espacial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Postdictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Transicion"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#FunkRock"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Chancho_en_Piedra"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Chancho_en_Piedra"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#HumorSocial"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Juventud"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1995</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Los_Jaivas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Los_Jaivas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Los_Prisioneros -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Los_Prisioneros">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#MelancoliaSocial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#MelancoliaSocial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Memoria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Memoria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Mon_Laferte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Mon_Laferte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Movimiento_Original -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Movimiento_Original">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#My_Blood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#My_Blood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Trap"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Polima_Westcoast"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Polima_Westcoast"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Autoafirmacion"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Juventud"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#NewWave -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#NewWave">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#NuevaCancionChilena -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#NuevaCancionChilena">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Odio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Odio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Postdictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Transicion"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Punk"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Fiskales_Ad_Hok"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Fiskales_Ad_Hok"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#RabiaSocial"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1993</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Original_Puel_Mapu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Original_Puel_Mapu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#HipHop"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Movimiento_Original"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Movimiento_Original"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Identidad"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#PueblosOriginarios"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Territorio"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Pablo_Chill_E -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Pablo_Chill_E">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Paz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Paz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Plata_Ta_Ta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Plata_Ta_Ta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Pop"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#ReggaetonProtesta"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Mon_Laferte"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Mon_Laferte"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#CriticaAElites"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Plebiscito -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Plebiscito">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Polima_Westcoast -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Polima_Westcoast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Pop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Pop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#PopExperimental -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#PopExperimental">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#PopLatino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#PopLatino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#PopUrbano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#PopUrbano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Por_que_no_se_van -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Por_que_no_se_van">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Postdictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Transicion"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#NewWave"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#PopLatino"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Rock"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Los_Prisioneros"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Carlos_Fonseca"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#CriticaAElites"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#CriticaSocial"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desigualdad"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Satira"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1986</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Portavoz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Portavoz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Postdictadura -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Postdictadura">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Epoca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Princesa_Alba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Princesa_Alba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Protesta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#PueblosOriginarios -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#PueblosOriginarios">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Punk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Punk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#PunkMelodico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#PunkMelodico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Quilapayun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Quilapayun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#RabiaSocial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#RabiaSocial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#RapPolitico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#RapPolitico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#ReggaetonProtesta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#ReggaetonProtesta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Regreso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Regreso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Epoca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#ResignificadasEn2019 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#ResignificadasEn2019">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Epoca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Epoca"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Rock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Rock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#RockProgresivoAndino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#RockProgresivoAndino">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Sangre_Rebelde -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Sangre_Rebelde">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#HipHop"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Trap"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Akriila"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Akriila"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#JuventudMarginal"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Santaferia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Santaferia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Santiago_del_Nuevo_Extremo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Santiago_del_Nuevo_Extremo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Satira -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Satira">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Schwenke_y_Nilo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Schwenke_y_Nilo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Shishigang -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Shishigang">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Trap"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Pablo_Chill_E"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Pablo_Chill_E"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Alienacion"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#JuventudMarginal"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Shock -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Shock">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#HipHop"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#RapPolitico"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Ana_Tijoux"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Ana_Tijoux"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#CriticaAElites"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2011</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Si_estamos_todos_tristes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Si_estamos_todos_tristes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Postdictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Transicion"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cumbiarock"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#La_Floripondio"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#La_Floripondio"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#MelancoliaSocial"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2000</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Simplemente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Simplemente">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#NuevaCancionChilena"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Santiago_del_Nuevo_Extremo"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Santiago_del_Nuevo_Extremo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#MelancoliaSocial"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1984</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Sol_y_Lluvia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Sol_y_Lluvia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#SurDeChile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#SurDeChile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Te_Quiero_Ver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Te_Quiero_Ver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Pop"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Trap"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Ceaese"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Ceaese"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Amor"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Desahogo"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Exilio"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Juventud"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2019</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Te_recuerdo_Amanda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Te_recuerdo_Amanda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#NuevaCancionChilena"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Victor_Jara"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Victor_Jara"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Amor"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#DDHH"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Exilio"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#MelancoliaSocial"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Memoria"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1969</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Territorio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Territorio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Todos_juntos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Todos_juntos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#RockProgresivoAndino"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Los_Jaivas"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Los_Jaivas"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Esperanza"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Identidad"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Paz"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Territorio"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Unidad"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1972</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Transicion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Transicion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Epoca"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Trap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Trap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Genero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Un_canto_por_la_paz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Un_canto_por_la_paz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Folk"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Aquelarre"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Aquelarre"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Paz"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1987</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Unidad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Unidad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Tematica"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Varios_Artistas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Varios_Artistas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Victor_Jara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Victor_Jara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Villa_Carinio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Villa_Carinio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Vuelvo_para_vivir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Vuelvo_para_vivir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Dictadura"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#ResignificadasEn2019"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#FolkAndino"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Illapu"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Illapu"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#DDHH"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Exilio"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#IdentidadCultural"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Memoria"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Regreso"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1991</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Weon_Y_Medio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Weon_Y_Medio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Cancion"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#EstallidoSocial"/>
+        <ontologia_chilena:perteneceAEpoca rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Relecturas"/>
+        <ontologia_chilena:perteneceAGenero rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#HipHop"/>
+        <ontologia_chilena:tieneArtista rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Jonas_Sanche"/>
+        <ontologia_chilena:tieneProductor rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Jonas_Sanche"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#CriticaAElites"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Protesta"/>
+        <ontologia_chilena:trataSobre rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Resistencia"/>
+        <ontologia_chilena:tieneAnio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</ontologia_chilena:tieneAnio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sariw/ontologia_chilena#Young_Cister -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sariw/ontologia_chilena#Young_Cister">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Artista"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sariw/ontologia_chilena#Productor"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
